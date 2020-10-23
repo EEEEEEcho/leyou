@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "name": "jdbc",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.echo.springboot.config.JdbcConfiguration",
+      "sourceMethod": "dataSource()"
+    },
+    {
+      "name": "jdbc",
+      "type": "com.echo.springboot.config.JdbcProperties",
+      "sourceType": "com.echo.springboot.config.JdbcProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jdbc.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "com.echo.springboot.config.JdbcProperties"
+    },
+    {
+      "name": "jdbc.password",
+      "type": "java.lang.String",
+      "sourceType": "com.echo.springboot.config.JdbcProperties"
+    },
+    {
+      "name": "jdbc.url",
+      "type": "java.lang.String",
+      "sourceType": "com.echo.springboot.config.JdbcProperties"
+    },
+    {
+      "name": "jdbc.username",
+      "type": "java.lang.String",
+      "sourceType": "com.echo.springboot.config.JdbcProperties"
+    }
+  ],
+  "hints": []
+}
