@@ -37,26 +37,26 @@ public class JdbcConfiguration {
 //    private String password;
 
     //第一种构造方式，属性注入
-//    @Autowired
-//    private JdbcProperties jdbcProperties;  //定义为自动注入后，要启用自动注入配置 @EnableConfigurationProperties
+    @Autowired
+    private JdbcProperties jdbcProperties;  //定义为自动注入后，要启用自动注入配置 @EnableConfigurationProperties
 //
 //    //第二种构造方式，构造方法注入
 //    public JdbcConfiguration(JdbcProperties jdbcProperties){
 //        this.jdbcProperties = jdbcProperties;
 //    }
 
-//    @Bean               //@Bean注解将方法的返回值注入到Spring容器
-//    public DataSource dataSource(){
-//        //生成连接池对象
-//        DruidDataSource druidDataSource = new DruidDataSource();
-//        //连接池四大天王：驱动器，连接url，用户名，密码
-//        druidDataSource.setDriverClassName(this.jdbcProperties.getDriverClassName());
-//        druidDataSource.setUrl(this.jdbcProperties.getUrl());
-//        //this关键字用来区分全局变量和局部变量
-//        druidDataSource.setUsername(this.jdbcProperties.getUsername());
-//        druidDataSource.setPassword(this.jdbcProperties.getPassword());
-//        return druidDataSource;
-//    }
+    @Bean               //@Bean注解将方法的返回值注入到Spring容器
+    public DataSource dataSource(){
+        //生成连接池对象
+        DruidDataSource druidDataSource = new DruidDataSource();
+        //连接池四大天王：驱动器，连接url，用户名，密码
+        druidDataSource.setDriverClassName(this.jdbcProperties.getDriverClassName());
+        druidDataSource.setUrl(this.jdbcProperties.getUrl());
+        //this关键字用来区分全局变量和局部变量
+        druidDataSource.setUsername(this.jdbcProperties.getUsername());
+        druidDataSource.setPassword(this.jdbcProperties.getPassword());
+        return druidDataSource;
+    }
 
     //第三种构造方式，方法形参注入
 //    @Bean               //@Bean注解将方法的返回值注入到Spring容器
@@ -72,11 +72,11 @@ public class JdbcConfiguration {
 //        return druidDataSource;
 //    }
 
-    //第四种，最优雅注入
-    @Bean
-    @ConfigurationProperties(prefix = "jdbc")
-    public DataSource dataSource(){
-        DruidDataSource dataSource = new DruidDataSource();
-        return dataSource;
-    }
+    //第四种，最优雅注入，这种方法使用一定要保证dataSource有set方法
+//    @Bean
+//    @ConfigurationProperties(prefix = "jdbc")
+//    public DataSource dataSource(){
+//        DruidDataSource dataSource = new DruidDataSource();
+//        return dataSource;
+//    }
 }

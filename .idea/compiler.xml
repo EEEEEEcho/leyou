@@ -7,15 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.echo.springboot" />
+        <module name="com.echo.springboot_user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.echo.springboot" target="1.8" />
+      <module name="com.echo.springboot_user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="com.echo.springboot" options="-parameters" />
+      <module name="com.echo.springboot_user" options="-parameters" />
     </option>
   </component>
 </project>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/com.echo.springboot/com.echo.springboot.iml" filepath="$PROJECT_DIR$/com.echo.springboot/com.echo.springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.echo.springboot_user/com.echo.springboot_user.iml" filepath="$PROJECT_DIR$/com.echo.springboot_user/com.echo.springboot_user.iml" />
     </modules>
   </component>
 </project>
